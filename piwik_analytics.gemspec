@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = 'piwik_analytics'
-  s.version           = '0.9'
+  s.version           = '0.9.1'
   s.date              = "2010-12-30"
   s.author            = 'Fabian Becker'
   s.email             = 'halfdan@xnorfz.de'
