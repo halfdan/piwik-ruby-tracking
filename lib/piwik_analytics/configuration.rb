@@ -20,10 +20,10 @@ module PiwikAnalytics
 
     #
     # Whether or not to use the async tracking
-    # Defaults to true
+    # Defaults to false
     #
     def use_async?
-      @use_async ||= (user_configuration_from_key('use_async') || true)
+      @use_async ||= (user_configuration_from_key('use_async') || false)
     end
 
     #

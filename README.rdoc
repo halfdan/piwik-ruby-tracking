@@ -31,7 +31,6 @@ Inside your `application.html.erb` (or haml, slim) simply add
 
     <%= piwik_tracking_tag %>
 
-
 Enjoy :)
 
 
