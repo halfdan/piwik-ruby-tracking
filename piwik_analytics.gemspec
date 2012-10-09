@@ -1,11 +1,11 @@
 spec = Gem::Specification.new do |s|
   s.name              = 'piwik_analytics'
-  s.version           = '0.9.2'
+  s.version           = '1.0.0'
   s.date              = Time.now.strftime "%Y-%m-%d"
   s.author            = 'Fabian Becker'
   s.email             = 'halfdan@xnorfz.de'
   s.homepage          = 'https://github.com/halfdan/piwik_analytics/'
-  s.summary           = "[Rails] Easily enable Google Analytics support in your Rails application."
+  s.summary           = "[Rails] Easily include Piwik tracking in your Rails application."
 
   s.description = 'By default this gem will output piwik analytics code for' +
                   "every page automatically, if it's configured correctly." +
