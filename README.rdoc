@@ -1,28 +1,39 @@
 = PiwikAnalytics
 
- This plugin enables support for Piwik in your Rails application. By default
-it will output the synchronous piwik tracking code for every page automatically
-(given that it is configured correctly). Configuring this plugin is easy:
+**Note:** This Gem has undergone a major rewrite in 1.x compared to 0.9.x.
 
-    PiwikAnalytics::Config.id_site = <Site ID>
-    PiwikAnalytics::Config.url = <Piwik-URL>
+The piwik_analytics gem provides an easy way to include Piwik into your application.
+By default it will output the synchronous piwik tracking code for every page
+(given that it is configured correctly).
 
-Where the <Site ID> the ID of your website inside Piwik. You can look it up
-under Settings -> Websites. <Piwik-URL> must be replaced by the URL to your
-Piwik installation.
+== Installation
 
-If you want PiwikAnalytics to use the asynchronous tracking code which was
-introduced in Piwik 1.1 you can add the folliwing line:
+Add `piwik_analytics` to Gemfile:
 
-    PiwikAnalytics::Config.use_async = true
+    gem 'piwik_analytics', '~> 1.0.0'
 
-If you want to disable the tracking code for particular controllers simply add
-the following line to those controllers:
+Run the generator:
 
-    skip_after_filter :add_piwik_analytics_tracking
+    rails g piwik_analytics:install
+
+This will install a piwik.yml configuration file into the `config` directory
+of your application.
+
+
+== Configuration
+
+Open up `config/piwik.yml` and edit the settings. Each setting is described in
+the config file itself.
+
+== Usage
+
+Inside your `application.html.erb` (or haml, slim) simply add
+
+    <%= piwik_tracking_tag %>
+
 
 Enjoy :)
 
 
 = Licence
-Copyright(c) 2010-2011 Fabian Becker, released under MIT licence.
+Copyright(c) 2010-2012 Fabian Becker, released under MIT licence.
