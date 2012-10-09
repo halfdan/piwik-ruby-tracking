@@ -63,7 +63,7 @@ module PiwikAnalytics
         if File.exist?(path)
           File.open(path) do |file|
             processed = ERB.new(file.read).result
-            YAML.load(processed)[::Rails.env]
+            YAML.load(processed)[::Rails.env]['piwik']
           end
         else
           {}

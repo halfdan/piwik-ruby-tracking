@@ -2,6 +2,8 @@ module PiwikAnalytics
   module Helpers
     def piwik_tracking_tag
       config = PiwikAnalytics.configuration
+      return if config.disabled?
+
       if config.use_async?
         tag = <<-CODE
         <!-- Piwik -->
