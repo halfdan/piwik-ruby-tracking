@@ -3,8 +3,10 @@ require 'active_support'
 
 module PiwikAnalytics
 
-  class Railtie < Rails::Railtie
-    railtie_name :piwik_analytics
+  class Piwik < Rails::Engine
+    engine_name :piwik_analytics
+
+    paths["app/views"]
 
     generators do
       load "generators/piwik_analytics.rb"
