@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), 'piwik_analytics', 'configuration')
 
 module PiwikAnalytics
-  require 'piwik_analytics/railtie' if defined?(Rails)
+  require 'piwik_analytics/engine' if defined?(Rails)
 
   class <<self
     attr_writer :configuration
