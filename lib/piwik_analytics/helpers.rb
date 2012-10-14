@@ -5,7 +5,7 @@ module PiwikAnalytics
       return if config.disabled?
 
       if config.use_async?
-        file = "/home/ber/Documenten/ANT_annatreurniet/gems/piwik_analytics/app/views/piwik_analytics/piwik_tracking_tag_async"
+        file = "piwik_analytics/piwik_tracking_tag_async"
       else
         file = "piwik_analytics/piwik_tracking_tag"
       end
