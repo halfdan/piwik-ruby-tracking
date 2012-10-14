@@ -15,7 +15,7 @@ module PiwikAnalytics
     # Defaults to 1
     #
     def id_site
-      @id_size ||= (user_configuration_from_key('id_size') || 1)
+      @id_site ||= (user_configuration_from_key('id_site') || 1)
     end
 
     #
