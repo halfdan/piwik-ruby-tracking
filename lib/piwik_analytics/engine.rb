@@ -13,7 +13,8 @@ module PiwikAnalytics
     end
 
     initializer "piwik_analytics.init", :before=> :load_config_initializers do
-      require "piwik_analytics/helpers"
+      require "piwik_analytics/view_helpers"
+      require "piwik_analytics/controller_helpers"
       load "piwik_analytics/init.rb"
     end
   end
