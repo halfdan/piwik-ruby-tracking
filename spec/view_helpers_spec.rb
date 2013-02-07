@@ -1,10 +1,10 @@
-require "piwik_analytics/helpers"
+require "piwik_analytics/view_helpers"
 
 class HelpersDouble
-  include PiwikAnalytics::Helpers
+  include PiwikAnalytics::ViewHelpers
 end
 
-describe PiwikAnalytics::Helpers do
+describe PiwikAnalytics::ViewHelpers do
   describe "#piwik_tracking_tag" do
     before(:each) do
       @config = mock("Configuration").as_null_object
