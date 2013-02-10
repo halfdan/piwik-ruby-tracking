@@ -8,10 +8,19 @@ module PiwikAnalytics
     end
 
     def method_missing(meth, *args, &block)
-      name = meth.to_s.camelize(:lower)
+      name = camelize(meth.to_s)
       if valid_method?(name) && valid_arguments?(name, args)
         call = { method: name, args: args }
         @calls.push call
+      else
+        super
+      end
+    end
+
+    def respond_to?(meth)
+      name = camelize(meth.to_s)
+      if valid_method?(name)
+        true
       else
         super
       end
@@ -44,6 +53,12 @@ module PiwikAnalytics
       end
       # Return in order
       return true
+    end
+
+    # Need to be independent from ActiveSupport
+    def camelize(str)
+      str = str.split('_').map {|w| w.capitalize}.join
+      str[0].downcase + str[1..-1]
     end
 
   @@methods = {
