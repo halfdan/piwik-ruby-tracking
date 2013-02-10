@@ -4,7 +4,6 @@ rvm:
   - jruby-19mode
   - rbx-19mode
   - ruby-head
-  - ree
 
 matrix:
   allow_failures:
