@@ -1,22 +1,32 @@
 module PiwikAnalytics
   class PiwikTracker
 
+    @@methods = Hash.new
+
     def initialize
       @calls = Array.new
     end
 
     def method_missing(meth, *args, &block)
-      name = meth.to_s.camlize(:lower)
-      valid_method? name
-      valid_arguments? args
-      call = { method: name, args: args }
-      @calls.push call
+      name = meth.to_s.camelize(:lower)
+      if valid_method?(name) && valid_arguments?(name, args)
+        call = { method: name, args: args }
+        @calls.push call
+      else
+        super
+      end
     end
 
-    def to_s
+    def render(async = false)
+      result = Array.new
       @calls.each do |call|
-        
+        if async
+          result << "_paq.push([#{call[:method]}])"
+        else
+          result << "piwikTracker.#{call[:method]}()"
+        end
       end
+      result.join "\n"
     end
 
   private
@@ -35,7 +45,6 @@ module PiwikAnalytics
       # Return in order
       return true
     end
-  end
 
   @@methods = {
     "setDocumentTitle" => [
@@ -103,4 +112,7 @@ module PiwikAnalytics
       { name: :method, optional: false }
     ]
   }
+  end
+
+  
 end
