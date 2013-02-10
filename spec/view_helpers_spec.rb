@@ -1,3 +1,4 @@
+require "piwik_analytics"
 require "piwik_analytics/view_helpers"
 
 class HelpersDouble

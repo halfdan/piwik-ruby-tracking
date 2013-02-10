@@ -4,7 +4,8 @@ module PiwikAnalytics
       config = PiwikAnalytics.configuration
       return if config.disabled?
 
-      yield PiwikAnalytics.tracker if block_given?
+      tracker = PiwikAnalytics.tracker
+      yield tracker if block_given?
 
       if config.use_async?
         file = "piwik_analytics/piwik_tracking_tag_async"
@@ -16,7 +17,7 @@ module PiwikAnalytics
         locals: {
           url: config.url, 
           id_site: config.id_site,
-          tracker: PiwikAnalytics.tracker
+          tracker: tracker
         }
       })
     end
