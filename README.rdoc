@@ -1,4 +1,4 @@
-{<img src="https://travis-ci.org/halfdan/piwik_analytics.png" />}[https://travis-ci.org/halfdan/piwik_analytics]
+{<img src="https://travis-ci.org/halfdan/piwik_analytics.png?branch=master" alt="Build Status" />}[https://travis-ci.org/halfdan/piwik_analytics]
 
 = PiwikAnalytics
 
