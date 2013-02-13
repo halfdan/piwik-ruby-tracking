@@ -35,4 +35,14 @@ describe PiwikAnalytics::PiwikTracker do
       expect { @tracker.some_other_method }.to raise_error(NoMethodError)
     end
   end
+
+  describe "#render" do
+    context "async" do
+      
+    end
+
+    context "!async" do
+
+    end
+  end
 end
