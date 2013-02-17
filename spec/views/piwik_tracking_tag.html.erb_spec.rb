@@ -9,12 +9,14 @@ describe "views/piwik_tracking_tag.html.erb" do
   it "should render url" do
     url = "example.com"
     id_site = nil
+    tracker = nil
     @template.result(binding).should =~ /http:\/\/example.com/
   end
 
   it "should render id_site" do
     url = nil
     id_site = 4
+    tracker = nil
     @template.result(binding).should =~ /"piwik\.php", 4/
   end
 end
