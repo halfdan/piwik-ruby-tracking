@@ -2,7 +2,7 @@
 
 = PiwikAnalytics
 
-**Note:** This Gem has undergone a major rewrite in 1.x compared to 0.9.x.
+<b>Note:</b> This Gem has undergone a major rewrite in 1.x compared to 0.9.x.
 
 The piwik_analytics gem provides an easy way to include Piwik into your application.
 By default it will output the synchronous piwik tracking code for every page
