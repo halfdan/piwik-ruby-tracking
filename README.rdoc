@@ -33,8 +33,14 @@ Inside your `application.html.erb` (or haml, slim) simply add
 
     <%= piwik_tracking_tag %>
 
-Enjoy :)
+PiwikAnalytics supports the JavaScript tracking API. You can call it by passing
+a block to the `piwik_tracking` or `piwik_tracking_tag` helpers inside of your 
+controller or view:
+
+    piwik_tracking do |tracker|
+      tracker.set_custom_variable 1, current_user.name
+    end
 
 
 = Licence
-Copyright(c) 2010-2012 Fabian Becker, released under MIT licence.
+Copyright(c) 2010-2013 Fabian Becker, released under MIT licence.
