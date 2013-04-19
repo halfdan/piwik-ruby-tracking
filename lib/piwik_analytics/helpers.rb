@@ -1,6 +1,6 @@
 module PiwikAnalytics
   module Helpers
-    def piwik_tracking_tag
+    def piwik_tracking_tag(custom_variables = [])
       config = PiwikAnalytics.configuration
       return if config.disabled?
 
@@ -11,7 +11,7 @@ module PiwikAnalytics
       end
       render({
         :file => file,
-        :locals => {:url => config.url, :id_site => config.id_site}
+        :locals => {:url => config.url, :id_site => config.id_site, :custom_variables => custom_variables}
       })
     end
   end
