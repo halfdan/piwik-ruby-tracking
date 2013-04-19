@@ -6,7 +6,7 @@
   try {
   var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", <%= id_site %>);
   <% custom_variables.each do |var| %>
-  piwikTracker.setCustomVariable(<%= var[:id] %>, <%= var[:name] %>, <%= var[:value] %>, <%= var[:scope] %>);
+  piwikTracker.setCustomVariable(<%= var[:id] %>, "<%= var[:name] %>", "<%= var[:value] %>", "<%= var[:scope] %>");
   <% end %>
   piwikTracker.trackPageView();
   piwikTracker.enableLinkTracking();

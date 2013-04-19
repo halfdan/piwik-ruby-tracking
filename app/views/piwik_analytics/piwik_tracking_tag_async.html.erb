@@ -8,9 +8,9 @@
   <% custom_variables.each do |var| %>
   _paq.push(['setCustomVariable',
   <%= var[:id] %>,
-  <%= var[:name] %>,
-  <%= var[:value] %>,
-  <%= var[:scope] %>
+  "<%= var[:name] %>",
+  "<%= var[:value] %>",
+  "<%= var[:scope] %>"
   <% end %>
   ]);
   _paq.push(['trackPageView']);
