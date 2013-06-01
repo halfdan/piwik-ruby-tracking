@@ -1,4 +1,3 @@
-
 module PiwikAnalytics
   class Configuration
 
@@ -23,7 +22,7 @@ module PiwikAnalytics
     # Defaults to false
     #
     def use_async?
-      @use_async ||= (user_configuration_from_key('use_async') || false)
+      @use_async ||= (user_configuration_from_key('use_async') || true)
     end
 
     #
