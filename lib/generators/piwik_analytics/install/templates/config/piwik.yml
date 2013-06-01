@@ -1,5 +1,5 @@
 # Configuration:
-# 
+#
 # disabled
 #   false if tracking tag should be shown
 # use_async
@@ -13,15 +13,15 @@ production:
   piwik:
     id_site: 1
     url: localhost
-    use_async: false
     disabled: false
+    use_async: true
 
 development:
   piwik:
     id_site: 1
     url: localhost
     disabled: true
-    use_async: false
+    use_async: true
     hostname: localhost
 
 test:
@@ -29,5 +29,5 @@ test:
     id_site: 1
     url: localhost
     disabled: true
-    use_async: false
+    use_async: true
     hostname: localhost
