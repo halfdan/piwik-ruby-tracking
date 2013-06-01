@@ -14,14 +14,14 @@ production:
     id_site: 1
     url: localhost
     disabled: false
-    use_async: true
+    use_async: false
 
 development:
   piwik:
     id_site: 1
     url: localhost
     disabled: true
-    use_async: true
+    use_async: false
     hostname: localhost
 
 test:
@@ -29,5 +29,5 @@ test:
     id_site: 1
     url: localhost
     disabled: true
-    use_async: true
+    use_async: false
     hostname: localhost
