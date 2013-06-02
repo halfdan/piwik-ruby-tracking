@@ -1,19 +1,24 @@
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
-  (function(){
-    var u=(("https:" == document.location.protocol) ? "https://<%= url %>/" : "http://<%= url %>/");
-    _paq.push(['setSiteId', <%= id_site %>]);
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['trackPageView']);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u = (("https:" == document.location.protocol) ? "https" : "http") + "://<%= url %>/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", <%= id_site %>]);
     var d=document,
-      g=d.createElement('script'),
-      s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript';
+      g=d.createElement("script"),
+      s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript";
     g.defer=true;
     g.async=true;
-    g.src=u+'piwik.js';
+    g.src=u+"piwik.js";
     s.parentNode.insertBefore(g,s);
   })();
 </script>
 <!-- End Piwik Tag -->
+<!-- Piwik Image Tracker -->
+<img src="//<%= url %>/piwik.php?idsite=<%= id_site %>&amp;rec=1" style="border:0" alt="" />
+<!-- End Piwik -->
