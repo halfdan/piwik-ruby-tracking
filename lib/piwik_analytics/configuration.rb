@@ -1,4 +1,3 @@
-
 module PiwikAnalytics
   class Configuration
 
