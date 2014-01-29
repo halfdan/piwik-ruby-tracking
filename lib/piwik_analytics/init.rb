@@ -1,1 +1,2 @@
-ActionView::Base.send :include, PiwikAnalytics::Helpers
+ActionView::Base.send :include, PiwikAnalytics::ViewHelpers
+ActionController::Base.send :include, PiwikAnalytics::ControllerHelpers

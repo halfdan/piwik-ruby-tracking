@@ -1,8 +1,10 @@
 module PiwikAnalytics
-  module Helpers
-    def piwik_tracking_tag
+  module ViewHelpers
+    def piwik_tracking_tag(&block)
       config = PiwikAnalytics.configuration
       return if config.disabled?
+
+      yield PiwikAnalytics.tracker if block_given?
 
       if config.use_async?
         file = "piwik_analytics/piwik_tracking_tag_async"
