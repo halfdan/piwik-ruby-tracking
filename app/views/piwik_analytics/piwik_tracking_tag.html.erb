@@ -7,7 +7,13 @@
     var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", <%= id_site %>);
     piwikTracker.trackPageView();
     piwikTracker.enableLinkTracking();
-  } catch( err ) {}
+  } catch( err ) {
+      (function() {
+        var img = document.createElement('img');
+        img.src = "//<%= url %>/piwik.php?idsite=<%= id_site %>&rec=1";
+        document.body.appendChild(img);
+    })();
+  }
 </script>
 <!-- End Piwik Tag -->
 <!-- Piwik Image Tracker -->
