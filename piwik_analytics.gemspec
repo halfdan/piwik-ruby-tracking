@@ -21,5 +21,6 @@ spec = Gem::Specification.new do |s|
   s.add_dependency 'actionpack'
   s.add_dependency 'activesupport'
 
-  s.add_development_dependency "rspec", "~> 2.12.0"
+  s.add_development_dependency "rspec", "~> 3.5.0"
+  s.add_development_dependency "rake"
 end
