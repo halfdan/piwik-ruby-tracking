@@ -1,10 +1,10 @@
 spec = Gem::Specification.new do |s|
   s.name              = 'piwik_analytics'
-  s.version           = '1.0.3'
+  s.version           = '2.0.0'
   s.date              = Time.now.strftime "%Y-%m-%d"
   s.author            = 'Fabian Becker'
   s.email             = 'halfdan@xnorfz.de'
-  s.homepage          = 'https://github.com/halfdan/piwik_analytics/'
+  s.homepage          = 'https://github.com/halfdan/piwik-ruby-tracking/'
   s.summary           = "[Rails] Easily include Piwik tracking in your Rails application."
 
   s.description = <<-DESC
@@ -23,4 +23,3 @@ spec = Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec", "~> 2.12.0"
 end
-
