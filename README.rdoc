@@ -1,4 +1,4 @@
-{<img src="https://travis-ci.org/halfdan/piwik_analytics.png?branch=master" alt="Build Status" />}[https://travis-ci.org/halfdan/piwik_analytics]
+{<img src="https://travis-ci.org/halfdan/piwik-ruby-tracking.png?branch=master" alt="Build Status" />}[https://travis-ci.org/halfdan/piwik-ruby-tracking]
 
 = PiwikAnalytics
 
@@ -12,7 +12,7 @@ By default it will output the synchronous piwik tracking code for every page
 
 Add `piwik_analytics` to Gemfile:
 
-    gem 'piwik_analytics', '~> 1.0.0'
+    gem 'piwik_analytics', '~> 2.0.0'
 
 Run the generator:
 
@@ -36,5 +36,5 @@ Inside your `application.html.erb` (or haml, slim) simply add
 Enjoy :)
 
 
-= Licence
-Copyright(c) 2010-2012 Fabian Becker, released under MIT licence.
+= License
+Copyright(c) 2010-2017 Fabian Becker, released under MIT license.
