@@ -9,12 +9,12 @@ describe "views/piwik_tracking_tag.html.erb" do
   it "should render url" do
     url = "example.com"
     id_site = 1
-    @template.result(binding).should =~ /\/\/example.com/
+    expect(@template.result(binding)).to match /\/\/example.com/
   end
 
   it "should render id_site" do
     url = nil
     id_site = 4
-    @template.result(binding).should =~ /'setSiteId', 4/
+    expect(@template.result(binding)).to match /'setSiteId', 4/
   end
 end
