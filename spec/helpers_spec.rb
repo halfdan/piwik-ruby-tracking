@@ -30,16 +30,7 @@ describe PiwikAnalytics::Helpers do
         @double.piwik_tracking_tag
       end
 
-      it 'should use file piwik_tracking_tag_async when async' do
-        @config.stub(:use_async?).and_return true
-        PiwikAnalytics.stub(:configuration).and_return @config
-
-        @double.should_receive(:render).with(hash_including(:file => 'piwik_analytics/piwik_tracking_tag_async'))
-        @double.piwik_tracking_tag
-      end
-
-      it 'should use file piwik_tracking_tag when not async' do
-        @config.stub(:use_async?).and_return false
+      it 'should use file piwik_tracking_tag' do
         PiwikAnalytics.stub(:configuration).and_return @config
 
         @double.should_receive(:render).with(hash_including(:file => 'piwik_analytics/piwik_tracking_tag'))
