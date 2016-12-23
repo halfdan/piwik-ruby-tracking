@@ -18,14 +18,6 @@ module PiwikAnalytics
     end
 
     #
-    # Whether or not to use the async tracking
-    # Defaults to false
-    #
-    def use_async?
-      @use_async ||= (user_configuration_from_key('use_async') || false)
-    end
-
-    #
     # Whether or not to disable Piwik.
     # Defaults to false.
     #
@@ -35,7 +27,7 @@ module PiwikAnalytics
 
     private
 
-    # 
+    #
     # return a specific key from the user configuration in config/piwik.yml
     #
     # ==== Returns

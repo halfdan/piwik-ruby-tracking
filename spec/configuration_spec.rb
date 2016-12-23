@@ -5,7 +5,6 @@ describe PiwikAnalytics::Configuration do
     conf_mock = {
       "id_site"   => 4,
       "url"       => "example.com",
-      "use_async" => true,
       "disabled"  => true
     }
 
@@ -17,9 +16,6 @@ describe PiwikAnalytics::Configuration do
   end
   it "returns a url" do
     @config.url.should eq "example.com"
-  end
-  it "has a use_async? flag" do
-    @config.use_async?.should be_true
   end
   it "has a disabled? flag" do
     @config.disabled?.should be_true
