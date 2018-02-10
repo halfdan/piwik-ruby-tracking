@@ -3,10 +3,10 @@ require 'rspec/core/rake_task'
 require 'rdoc/task'
 
 desc 'Default: run specs.'
-task :default => :spec
+task default: :spec
 
 RSpec::Core::RakeTask.new(:spec)
-task :default => :spec
+task default: :spec
 
 desc 'Generate documentation for the piwik_analytics plugin.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
