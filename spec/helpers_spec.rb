@@ -30,10 +30,10 @@ describe PiwikAnalytics::Helpers do
         @double.piwik_tracking_tag
       end
 
-      it 'should use file piwik_tracking_tag' do
+      it 'should use template piwik_tracking_tag' do
         allow(PiwikAnalytics).to receive(:configuration).and_return(@config)
 
-        expect(@double).to receive(:render).with(hash_including(file: 'piwik_analytics/piwik_tracking_tag'))
+        expect(@double).to receive(:render).with(hash_including(template: 'piwik_analytics/piwik_tracking_tag'))
         @double.piwik_tracking_tag
       end
     end
