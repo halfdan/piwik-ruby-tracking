@@ -5,7 +5,7 @@ module PiwikAnalytics
       return if config.disabled?
 
       render({
-        file: "piwik_analytics/piwik_tracking_tag",
+        template: "piwik_analytics/piwik_tracking_tag",
         locals: {url: config.url, id_site: config.id_site}
       })
     end
